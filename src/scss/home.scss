@@ -1,0 +1,24 @@
+.banner {
+
+  /* .banner__container */
+  &__container {
+
+    /* .banner__container_wide */
+    &_wide {}
+  }
+
+  &__image {
+
+    img {
+      max-width: 100%;
+
+      @media (max-width:em(375)) {
+        height: 178px;
+      }
+    }
+
+    @media (max-width:$mobile) {
+      margin: 0 -15px;
+    }
+  }
+}

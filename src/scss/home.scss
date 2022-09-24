@@ -252,8 +252,8 @@
 
 //========================================================================================================================================================
 
-
 .all-lottery {
+  @include adaptiveValue("padding-bottom", 76, 25, 1920, 375, 2);
 
   /* .all-lottery__container */
   &__container {}
@@ -275,9 +275,6 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
-
-  /* .all-lottery__item */
-  &__item {}
 
   /* .all-lottery__link-more */
   &__link-more {
@@ -303,10 +300,10 @@
   &::after {
     content: '';
     position: absolute;
-    right: 17px;
-    top: 9px;
-    width: 16px;
-    height: 16px;
+    right: rem(17);
+    top: rem(9);
+    width: rem(16);
+    height: rem(16);
     background: url('@img/icons/star.svg') 0 0 no-repeat;
 
     @media (max-width:$mobile) {
@@ -317,7 +314,7 @@
   }
 
   @media (max-width:$mobile) {
-    padding: 16px 8px 10px;
+    padding: rem(16) rem(8) rem(10);
   }
 
   /* .item-all-lottery__img */
@@ -327,15 +324,15 @@
     align-items: center;
 
     @include adaptiveValue("margin-bottom", 27, 12, 1920, 375, 2);
-    width: 96px;
-    height: 94px;
+    width: rem(96);
+    height: rem(94);
 
     border-radius: 50%;
     border: 2px solid #e0e0e0;
 
     @media (max-width:$mobile) {
-      width: 81px;
-      height: 78px;
+      width: rem(81);
+      height: rem(78);
 
       img {
         max-width: 100%;
@@ -407,7 +404,6 @@
       &:not(:last-child) {
         margin-bottom: rem(8);
       }
-
     }
   }
 
@@ -419,4 +415,183 @@
       padding: rem(6) rem(36);
     }
   }
+}
+
+//========================================================================================================================================================
+
+.winners {
+
+  /* .winners__container */
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+  }
+}
+
+.big-winner {
+
+  /* .big-winner__title */
+  &__title {
+    margin-bottom: rem(15);
+  }
+
+  /* .big-winner__body */
+  &__body {
+    padding: 20px 94px 20px 47px;
+  }
+
+  /* .big-winner__sum */
+  &__sum {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(25);
+    justify-content: center;
+
+    font-size: rem(36);
+    font-weight: 700;
+    line-height: math.div(22, 36);
+    color: $blueColor;
+
+    span {
+      margin-left: 20px;
+      margin: 0 10px 20px;
+
+
+      font-size: rem(28);
+      font-weight: 500;
+      line-height: math.div(38, 28);
+      color: #000;
+    }
+
+  }
+
+  /* .big-winner__content */
+
+  &__content {
+    display: flex;
+  }
+
+  /* .big-winner__media */
+  &__media {
+    // flex: 1 1 55.8%;
+    // flex: 1 1 auto;
+  }
+
+  /* .big-winner__bg */
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -26px;
+    top: 0;
+    z-index: -1;
+  }
+
+  /* .big-winner__image */
+  &__image {
+    position: relative;
+  }
+
+  /* .big-winner__photo */
+
+  &__photo {
+    position: relative;
+    z-index: 10;
+  }
+
+
+  /* .big-winner__results */
+  &__results {
+    display: flex;
+  }
+
+  /* .big-winner__story */
+  &__story {}
+}
+
+.title-block {}
+
+.border-block {}
+
+.results-big-winner {
+
+  /* .results-big-winner__text */
+  &__text {
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: math.div(16.8, 14);
+  }
+
+  /* .results-big-winner__items */
+  &__items {
+    display: flex;
+  }
+
+  /* .results-big-winner__item */
+  &__item {}
+
+  /* .results-big-winner__date */
+  &__date {}
+}
+
+.story-big-winner {
+
+  /* .story-big-winner__title */
+  &__title {}
+
+  /* .story-big-winner__text */
+  &__text {}
+
+  /* .story-big-winner__link */
+  &__link {}
+
+  /* .story-big-winner__btn */
+  &__btn {}
+}
+
+.btn {}
+
+.our-winners {
+
+  /* .our-winners__title */
+  &__title {}
+
+  /* .our-winners__prize */
+  &__prize {}
+
+  /* .our-winners__list */
+  &__list {}
+
+  /* .our-winners__item */
+  &__item {}
+}
+
+.prize-our-winners {
+
+  /* .prize-our-winners__title */
+  &__title {}
+
+  /* .prize-our-winners__sum */
+  &__sum {}
+
+  /* .prize-our-winners__tickets */
+  &__tickets {}
+}
+
+.item-our-winners {
+
+  /* .item-our-winners__icon */
+  &__icon {}
+
+  /* .item-our-winners__content */
+  &__content {}
+
+  /* .item-our-winners__date */
+  &__date {}
+
+  /* .item-our-winners__name */
+  &__name {}
+
+  /* .item-our-winners__attempts */
+  &__attempts {}
 }

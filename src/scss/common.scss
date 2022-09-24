@@ -1,6 +1,45 @@
 // Заголовки, общие БЄМ блоки и проче...
 
-.title {}
+.title {
+  &-lottery {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+
+    font-weight: 500;
+    line-height: math.div(16.8, 14);
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: url('@img/icons/usa.svg') 0 0 no-repeat;
+      width: rem(20);
+      height: rem(14);
+      left: rem(-30);
+    }
+  }
+
+  &-block {
+    padding: rem(10) 0;
+
+    background-color: $headColor;
+
+    border-radius: rem(8);
+    font-size: rem(18);
+    font-weight: 700;
+    line-height: math.div(24, 18);
+    color: #fff;
+    text-align: center;
+
+    @media (max-width:$mobile) {
+      padding: rem(13) 0;
+
+      font-size: rem(16);
+      line-height: math.div(19.2, 16);
+    }
+  }
+}
 
 .border-block {
   border: 1px solid #E0E0E0;
@@ -8,9 +47,11 @@
 }
 
 .timer {
+  padding-left: rem(22);
+
   font-size: rem(18);
   font-weight: 500;
-  line-height: math.div(18 , 18);
+  line-height: math.div(18, 18);
 }
 
 // .body-grid {

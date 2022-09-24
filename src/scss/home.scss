@@ -1,5 +1,4 @@
 .banner {
-  margin-bottom: rem(30);
   @include adaptiveValue("margin-bottom", 30, 16, 1920, 375, 2);
 
   /* .banner__container */
@@ -26,7 +25,8 @@
 }
 
 .features {
-  margin-bottom: rem(1000);
+  @include adaptiveValue("padding-bottom", 75, 25, 1920, 375, 2);
+
 
   /* .features__container */
   &__container {}
@@ -42,8 +42,8 @@
       justify-content: center;
       row-gap: 14px;
     }
-    
-    @media (max-width:$mobile){
+
+    @media (max-width:$mobile) {
       grid-template-columns: repeat(1, 343px);
     }
   }
@@ -55,9 +55,6 @@
 .item-features {
   display: flex;
   padding: rem(4) rem(15) rem(6) rem(4);
-
-  border: 1px solid #E0E0E0;
-  border-radius: rem(8);
 
   @media (max-width: em(1080)) {
     padding: rem(4) rem(3) rem(6) rem(4);
@@ -112,5 +109,162 @@
   &__text {
     line-height: math.div(16.8, 14);
     color: #5F5F5F;
+  }
+}
+
+//========================================================================================================================================================
+
+.up-lottery {
+
+  margin-bottom: rem(1000);
+
+  /* .up-lottery__container */
+  &__container {
+    @media (max-width: em(1080)) {
+      text-align: center;
+    }
+
+    @media (max-width:$mobileSmall) {
+      text-align: left;
+    }
+  }
+
+  /* .up-lottery__list */
+
+  .up-lottery__title {
+    @include adaptiveValue("margin-bottom", 30, 12, 1920, 375, 2);
+
+    @include adaptiveValue("font-size", 24, 18, 1920, 375, 2);
+    font-weight: 500;
+    line-height: math.div(36, 24);
+
+    @media (max-width:$mobile) {
+      line-height: math.div(36, 18);
+    }
+  }
+
+  /* .up-lottery__list */
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(15);
+
+    @media (max-width: em(1080)) {
+      grid-template-columns: repeat(2, 343px);
+      justify-content: center;
+      row-gap: 14px;
+    }
+
+    @media (max-width:$mobile) {
+      grid-template-columns: repeat(1, 343px);
+    }
+  }
+
+  /* .up-lottery__item */
+  &__item {}
+}
+
+.item-up-lottery {
+  overflow: hidden;
+
+  /* .item-up-lottery__img */
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(141);
+    height: rem(80);
+
+    border-radius: 100px / 60px;
+    border: 2px solid #e0e0e0;
+
+    @media (max-width: em(1150)) {
+      width: rem(123);
+    }
+  }
+
+  /* .item-up-lottery__head */
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    padding: rem(6) rem(39) rem(5) rem(28);
+
+    @media (max-width: em(1150)) {
+      padding: rem(6) rem(23) rem(3) rem(24);
+    }
+  }
+
+  /* .item-up-lottery__content */
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: rem(18) 0 0 rem(2);
+
+    @media (max-width:$mobile) {
+      padding: rem(12) 0 0 rem(2);
+    }
+  }
+
+  /* .item-up-lottery__title */
+  &__title {
+    position: relative;
+    display: flex;
+    align-self: end;
+    align-items: center;
+    margin: 0 rem(5) rem(14);
+
+    font-weight: 500;
+    line-height: math.div(16.8, 14);
+    text-transform: uppercase;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: url('@img/icons/usa.svg') 0 0 no-repeat;
+      width: 20px;
+      height: 14px;
+      left: -30px;
+    }
+
+    @media (max-width:$mobile) {
+      margin: 0 rem(0) rem(12);
+    }
+  }
+
+  /* .item-up-lottery__sum */
+  &__sum {
+    font-size: rem(26);
+    font-weight: 700;
+    line-height: math.div(22, 26);
+    color: $headColor;
+
+    @media (max-width:$mobile) {
+      font-size: rem(24);
+    }
+  }
+
+  /* .item-up-lottery__footer */
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(11) rem(72) rem(10) rem(12);
+
+    background-color: $blueColor;
+
+    @media (max-width:$mobile) {
+      padding: rem(13) rem(50) rem(12) rem(12);
+    }
+  }
+
+  /* .item-up-lottery__btn */
+  &__btn {}
+
+  /* .item-up-lottery__timer */
+  &__timer {
+    color: #fff;
+    display: block;
+    padding-left: rem(22);
+    background: url('@img/icons/alarm-wh.svg') left center no-repeat;
   }
 }

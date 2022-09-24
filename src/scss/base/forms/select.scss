@@ -5,7 +5,7 @@
 
 	// .select__body
 	&__body {
-		width: 112px;
+		width: rem(112);
 		position: relative;
 	}
 
@@ -15,7 +15,6 @@
 		cursor: pointer;
 		width: 100%;
 		background: url('@img/icons/usa.svg') 0 center no-repeat;
-
 	}
 
 	// .select__value

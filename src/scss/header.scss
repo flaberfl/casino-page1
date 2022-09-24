@@ -1,7 +1,6 @@
 //====================================================================================================
 
 .header {
-  // padding-bottom: rem(30);
   @include adaptiveValue("padding-bottom", 30, 9, 1200, 375);
 
   &__top {
@@ -52,7 +51,6 @@
   }
 
   &__social {
-
     display: flex;
     align-items: center;
     gap: rem(10);
@@ -63,7 +61,7 @@
     /* .menu__body */
     &__body {
       display: flex;
-      border-radius: 8px;
+      border-radius: rem(8);
       background-color: $headColor;
 
       @media (max-width:em(860)) {

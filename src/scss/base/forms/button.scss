@@ -3,15 +3,21 @@
 
 .btn {
 	display: inline-flex;
-	padding: 0px 0px;
-	// border-radius: 8px;
+	border-radius: rem(8);
 	align-items: center;
-
+	padding: 6px 53px;
+	
 	font-size: rem(16);
+	font-weight: 500;
+	line-height: math.div( 24, 16);
+	color: #000;
+	background-color: $btnColor;
+	
+	@media (max-width:em(1150)){
+		padding: 5px 40px;
+	}
 
 	@media (any-hover: hover) {
-		&:hover {
-			
-		}
+		&:hover {}
 	}
 }

@@ -1,6 +1,16 @@
 // Заголовки, общие БЄМ блоки и проче...
 
-.title {
+.title {}
+
+.border-block {
+  border: 1px solid #E0E0E0;
+  border-radius: rem(8);
+}
+
+.timer {
+  font-size: rem(18);
+  font-weight: 500;
+  line-height: math.div(18 , 18);
 }
 
 // .body-grid {

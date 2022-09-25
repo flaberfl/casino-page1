@@ -253,7 +253,7 @@
 //========================================================================================================================================================
 
 .all-lottery {
-  @include adaptiveValue("padding-bottom", 76, 25, 1920, 375, 2);
+  @include adaptiveValue("padding-bottom", 77, 25, 1920, 375, 2);
 
   /* .all-lottery__container */
   &__container {}
@@ -423,12 +423,15 @@
 
   /* .winners__container */
   &__container {
-    display: grid;
-    grid-template-columns: 1fr min-content;
+    // display: grid;
+    // grid-template-columns: 1fr min-content;
+    display: flex;
+    gap: 15px;
   }
 }
 
 .big-winner {
+  flex: 0 1 66.23%;
 
   /* .big-winner__title */
   &__title {
@@ -437,15 +440,16 @@
 
   /* .big-winner__body */
   &__body {
-    padding: 20px 94px 20px 47px;
+    padding: rem(20) rem(94) rem(20) rem(47);
   }
 
   /* .big-winner__sum */
   &__sum {
     display: flex;
     align-items: center;
-    margin-bottom: rem(25);
     justify-content: center;
+    margin-bottom: rem(25);
+    margin-right: rem(12);
 
     font-size: rem(36);
     font-weight: 700;
@@ -453,16 +457,13 @@
     color: $blueColor;
 
     span {
-      margin-left: 20px;
-      margin: 0 10px 20px;
-
+      margin: 0 rem(10) 0 rem(20);
 
       font-size: rem(28);
       font-weight: 500;
       line-height: math.div(38, 28);
       color: #000;
     }
-
   }
 
   /* .big-winner__content */
@@ -473,8 +474,8 @@
 
   /* .big-winner__media */
   &__media {
-    // flex: 1 1 55.8%;
-    // flex: 1 1 auto;
+    flex: 0 1 55.8%;
+    // text-align: right;
   }
 
   /* .big-winner__bg */
@@ -490,6 +491,7 @@
   /* .big-winner__image */
   &__image {
     position: relative;
+    margin-bottom: rem(19);
   }
 
   /* .big-winner__photo */
@@ -499,21 +501,31 @@
     z-index: 10;
   }
 
+  /* .big-winner__date */
+  &__date {
+    margin-right: rem(80);
+
+    font-size: rem(12);
+    line-height: math.div(12.6, 12);
+    text-align: right;
+  }
+
 
   /* .big-winner__results */
   &__results {
-    display: flex;
+    margin-bottom: rem(7);
   }
 
   /* .big-winner__story */
   &__story {}
 }
 
-.title-block {}
-
-.border-block {}
 
 .results-big-winner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: rem(36);
 
   /* .results-big-winner__text */
   &__text {
@@ -525,36 +537,82 @@
   /* .results-big-winner__items */
   &__items {
     display: flex;
+    gap: rem(4);
   }
 
   /* .results-big-winner__item */
-  &__item {}
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  /* .results-big-winner__date */
-  &__date {}
+    height: rem(20);
+    flex: 0 0 rem(20);
+
+    background-color: $headColor;
+    border-radius: 50%;
+
+    font-size: rem(12);
+    line-height: math.div(14.4, 12);
+    color: #fff;
+  }
 }
 
 .story-big-winner {
+  padding-left: rem(44);
 
   /* .story-big-winner__title */
-  &__title {}
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(14);
+    }
+
+    font-size: rem(16);
+    font-weight: 500;
+    line-height: math.div(24, 16);
+  }
 
   /* .story-big-winner__text */
-  &__text {}
+  &__text {
+    line-height: math.div(21, 14);
+
+    &:not(:last-child) {
+      margin-bottom: rem(32);
+    }
+  }
 
   /* .story-big-winner__link */
-  &__link {}
+  &__link {
+    display: block;
+
+    font-weight: 500;
+    line-height: math.div(16.8, 14);
+    color: $blueColor;
+    text-decoration: underline;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 36px;
+    }
+  }
 
   /* .story-big-winner__btn */
-  &__btn {}
+  &__btn {
+    padding: 9px 85px;
+
+    font-size: rem(14);
+  }
 }
 
-.btn {}
-
 .our-winners {
+  flex: 0 1 32.47%;
+  // flex: 1 1 auto;
 
   /* .our-winners__title */
-  &__title {}
+  &__title {
+    margin-bottom: rem(15);
+
+  }
 
   /* .our-winners__prize */
   &__prize {}
@@ -567,31 +625,81 @@
 }
 
 .prize-our-winners {
+  padding: rem(5) rem(10) rem(7);
+  margin-bottom: rem(32);
+
+  text-align: center;
 
   /* .prize-our-winners__title */
-  &__title {}
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(3);
+    }
+
+    font-size: rem(18);
+    line-height: math.div(21.6, 18);
+  }
 
   /* .prize-our-winners__sum */
-  &__sum {}
+  &__sum {
+    font-size: rem(26);
+    font-weight: 700;
+    line-height: math.div(22, 26);
+    color: $headColor;
+
+    &:not(:last-child) {
+      margin-bottom: rem(5);
+    }
+  }
 
   /* .prize-our-winners__tickets */
-  &__tickets {}
+  &__tickets {
+    font-size: rem(26);
+    font-weight: 500;
+    line-height: math.div(31.2, 26);
+
+    span {
+      font-size: rem(18);
+      font-weight: 400;
+      line-height: math.div(21.6, 18);
+    }
+  }
 }
 
 .item-our-winners {
+  display: flex;
+  padding: rem(10) rem(10) rem(4) rem(15);
+
+  &:not(:last-child) {
+    margin-bottom: rem(15);
+  }
+
 
   /* .item-our-winners__icon */
   &__icon {}
 
   /* .item-our-winners__content */
-  &__content {}
+  &__content {
+    padding: rem(6) rem(15) 0;
+  }
 
   /* .item-our-winners__date */
-  &__date {}
+  &__date {
+    margin-bottom: rem(2);
+  }
 
   /* .item-our-winners__name */
-  &__name {}
+  &__name {
+    padding-left: 25px;
+    margin-bottom: rem(5);
+
+    background: url('@img/icons/deutsche.svg') left center no-repeat;
+    font-weight: 500;
+  }
 
   /* .item-our-winners__attempts */
-  &__attempts {}
+  &__attempts {
+    line-height: math.div(21, 14);
+    color: #5f5f5f;
+  }
 }

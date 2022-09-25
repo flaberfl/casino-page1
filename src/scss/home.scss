@@ -1,13 +1,6 @@
 .banner {
   @include adaptiveValue("margin-bottom", 30, 16, 1920, 375, 2);
 
-  /* .banner__container */
-  &__container {
-
-    /* .banner__container_wide */
-    &_wide {}
-  }
-
   &__image {
 
     img {
@@ -19,7 +12,7 @@
     }
 
     @media (max-width:$mobile) {
-      margin: 0 -15px;
+      margin: 0 rem(-15);
     }
   }
 }
@@ -232,9 +225,6 @@
       padding: rem(13) rem(50) rem(12) rem(12);
     }
   }
-
-  /* .item-up-lottery__btn */
-  &__btn {}
 
   /* .item-up-lottery__timer */
   &__timer {
@@ -456,7 +446,6 @@
 
   /* .big-winner__body */
   &__body {
-    padding: rem(20) rem(94) rem(20) rem(47);
     @include adaptiveValue("padding-right", 94, 0, 1920, 375, 2);
     @include adaptiveValue("padding-left", 47, 0, 1920, 768, 2);
     @include adaptiveValue("padding-top", 20, 15, 1920, 375, 2);
@@ -496,8 +485,8 @@
 
     img {
       @media (max-width:$mobile) {
-        height: 40px;
-        width: 40px;
+        height: rem(40);
+        width: rem(40);
       }
     }
   }
@@ -509,7 +498,6 @@
 
     @media (max-width:$mobile) {
       flex-direction: column;
-      // justify-content: center;
     }
   }
 
@@ -541,7 +529,7 @@
 
     img {
       @media (max-width: em(375)) {
-        height: 171px;
+        height: rem(171);
       }
     }
 
@@ -549,11 +537,9 @@
       text-align: center;
 
       @media (max-width: em(375)) {
-        height: 171px;
         margin-bottom: rem(16);
       }
     }
-
   }
 
   /* .big-winner__photo */
@@ -583,6 +569,7 @@
   /* .big-winner__results */
   &__results {
     margin-bottom: rem(7);
+    margin-left: rem(36);
 
     @media (max-width:$mobile) {
       justify-content: center;
@@ -590,6 +577,7 @@
 
     @media (max-width:em(375)) {
       justify-content: start;
+      margin-left: 41px;
     }
   }
 
@@ -602,11 +590,9 @@
   display: flex;
   align-items: center;
   gap: rem(10);
-  margin-left: rem(36);
 
   @media (max-width: em(375)) {
     gap: rem(15);
-    margin-left: 41px;
   }
 
   /* .results-big-winner__text */

@@ -803,6 +803,9 @@
 
 .faq {
 
+  @include adaptiveValue("padding-bottom", 63, 29, 1920, 375, 2);
+
+
   @media (max-width:$mobileSmall) {
     display: none;
   }

@@ -1,7 +1,7 @@
 .btn {
 	display: inline-flex;
 	align-items: center;
-	padding: 6px 53px;
+	padding: rem(6) rem(53);
 
 	font-size: rem(16);
 	font-weight: 500;
@@ -10,7 +10,7 @@
 	background-color: $btnColor;
 
 	@media (max-width:em(1150)) {
-		padding: 5px 40px;
+		padding: rem(5) rem(40);
 	}
 
 	@media (any-hover: hover) {

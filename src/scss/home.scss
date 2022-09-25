@@ -212,6 +212,10 @@
     }
   }
 
+  &__btn {
+    border-radius: rem(8);
+  }
+
   /* .item-up-lottery__footer */
   &__footer {
     display: flex;
@@ -398,6 +402,7 @@
   /* .item-all-lottery__btn */
   &__btn {
     padding: rem(7) rem(58);
+    border-radius: rem(8);
 
     @media (max-width:$mobile) {
       padding: rem(6) rem(36);
@@ -691,6 +696,8 @@
   &__btn {
     padding: rem(9) rem(85);
     min-width: 232px;
+    border-radius: rem(8);
+
 
     font-size: rem(14);
     text-align: center;

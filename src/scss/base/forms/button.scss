@@ -1,23 +1,21 @@
-//<BUTTONS (a.btn+tab)>
-// Снипет (HTML): btn
-
 .btn {
 	display: inline-flex;
-	border-radius: rem(8);
 	align-items: center;
 	padding: 6px 53px;
-	
+
 	font-size: rem(16);
 	font-weight: 500;
-	line-height: math.div( 24, 16);
+	line-height: math.div(24, 16);
 	color: #000;
 	background-color: $btnColor;
-	
-	@media (max-width:em(1150)){
+
+	@media (max-width:em(1150)) {
 		padding: 5px 40px;
 	}
 
 	@media (any-hover: hover) {
-		&:hover {}
+		&:hover {
+			opacity: .7;
+		}
 	}
 }

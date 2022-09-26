@@ -652,7 +652,7 @@
 
     @media (max-width: em(375)) {
       &:not(:last-child) {
-        margin-bottom: rem(10);
+        margin-bottom: rem(8);
       }
     }
   }
@@ -664,7 +664,12 @@
     margin-bottom: rem(32);
 
     @media (max-width:$mobile) {
-      margin-bottom: rem(11);
+      margin-bottom: rem(12);
+    }
+
+    @media (max-width:$mobileSmall) {
+      padding-left: 15px;
+      text-align: left;
     }
   }
 

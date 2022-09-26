@@ -12,21 +12,26 @@
     align-items: center;
 
     @media (max-width:$mobile) {
-      padding-right: 0;
-      flex-wrap: wrap;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      align-items: start;
+      row-gap: rem(30);
     }
 
     @media (max-width:$mobileSmall) {
-      justify-content: space-between;
+      justify-items: start;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media (max-width:$mobileSmall) {
+      row-gap: rem(4);
     }
   }
-
-  &__column {}
 
   /* .footer__links */
   &__links {
     padding-top: rem(30);
-    margin-left: rem(94);
+    @include adaptiveValue("margin-left", 94, 0, 1200, 768, 1);
 
     @media (max-width:$mobile) {
       padding-top: rem(22);
@@ -35,7 +40,7 @@
 
   /* .footer__copyright */
   &__copyright {
-    padding-left: 79px;
+    @include adaptiveValue("margin-left", 79, 0, 1200, 768, 1);
     margin-top: rem(10);
 
     @media (min-width:$mobileSmall) {
@@ -45,8 +50,11 @@
 
   /* .footer__payment */
   &__payment {
-    justify-self: end;
-    margin-right: rem(101);
+    @include adaptiveValue("margin-right", 101, 0, 1200, 768, 1);
+
+    @media (min-width:$mobileSmall) {
+      justify-self: end;
+    }
   }
 }
 
@@ -110,7 +118,7 @@
 
     @media (max-width:$mobile) {
       &:not(:last-child) {
-        margin-bottom: rem(10);
+        margin-bottom: rem(11);
       }
     }
   }
@@ -139,12 +147,19 @@
     font-size: rem(16);
     font-weight: 400;
     line-height: math.div(21, 16);
+
+    @media (max-width:$mobile) {
+      font-size: rem(14);
+      line-height: math.div(21, 14);
+    }
+
+    &_home {
+      @media (min-width:$mobileSmall) {
+        display: none;
+      }
+    }
   }
 
-  @media (max-width:$mobile) {
-    font-size: rem(14);
-    line-height: math.div(21, 14);
-  }
 }
 
 .copyright-footer {
@@ -177,7 +192,7 @@
       margin-bottom: rem(7);
     }
 
-    max-width: 250px;
+    max-width: rem(250);
 
     font-size: rem(12);
     font-weight: 400;
@@ -197,8 +212,6 @@
 
   /* .copyright-footer__address */
   &__address {
-    max-width: rem(235);
-
     font-size: rem(13);
     line-height: 155%;
 
@@ -207,6 +220,10 @@
 
       font-size: rem(10);
       line-height: math.div(21, 10);
+    }
+
+    @media (min-width:$mobileSmall) {
+      max-width: rem(235);
     }
   }
 }
@@ -232,7 +249,7 @@
     margin-bottom: rem(38);
 
     @media (max-width:$mobileSmall) {
-      margin-top: rem(20);
+      margin-top: rem(18);
 
       img {
         height: rem(24);
@@ -265,13 +282,13 @@
     flex-wrap: wrap;
     gap: rem(10);
     margin-bottom: rem(28);
-    max-width: 159px;
+    max-width: rem(159);
   }
 
   /* .payment-footer__security */
   &__security {
     @media (max-width:$mobileSmall) {
-      margin-left: rem(36);
+      margin-left: rem(28);
     }
   }
 }

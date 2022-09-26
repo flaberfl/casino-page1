@@ -5,7 +5,7 @@
   &__container {
     @include adaptiveValue("padding-top", 115, 20);
 
-    background: url('@img/background.png') 0 0 no-repeat;
+    background: url('@img/background.png') 18px 10px no-repeat;
     padding-right: rem(50);
     display: flex;
     justify-content: space-around;

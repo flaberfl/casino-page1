@@ -501,6 +501,8 @@
 
   &__content {
     display: flex;
+    column-gap: rem(44);
+
 
     @media (max-width:$mobile) {
       flex-direction: column;
@@ -633,14 +635,9 @@
 }
 
 .story-big-winner {
-  padding-left: rem(44);
 
   @media (max-width: em(1100)) {
     text-align: center;
-  }
-
-  @media (max-width:$mobile) {
-    padding-left: 0;
   }
 
   /* .story-big-winner__title */

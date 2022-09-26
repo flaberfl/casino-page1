@@ -240,7 +240,7 @@
 //========================================================================================================================================================
 
 .all-lottery {
-  @include adaptiveValue("padding-bottom", 77, 29, 1920, 375, 2);
+  @include adaptiveValue("padding-bottom", 75, 29, 1920, 375, 2);
 
   /* .all-lottery__container */
   &__container {}
@@ -378,7 +378,7 @@
   /* .item-all-lottery__timer */
   &__timer {
     &:not(:last-child) {
-      margin-bottom: rem(13);
+      margin-bottom: rem(14);
     }
 
     background: url('@img/icons/alarm.svg') left center no-repeat;
